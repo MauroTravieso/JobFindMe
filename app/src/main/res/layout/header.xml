@@ -21,4 +21,13 @@
         android:textSize="20dp"
         android:textAllCaps="false"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mdp_group3_contact@mail.com"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:textAllCaps="false"/>
+
 </LinearLayout>

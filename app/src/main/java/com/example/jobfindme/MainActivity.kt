@@ -21,6 +21,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Getting the intent from MainActivity
+        val intt = intent
+        val output = intt.getStringExtra("username")
+        welcome.text = output
+
         setSupportActionBar(toolBar)
         val actionBar = supportActionBar
         actionBar?.title = "Job Find Me!"

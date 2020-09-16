@@ -11,10 +11,17 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         btnSingIn.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            var intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("username", "Welcome, " + email.text.toString())
+            startActivity(intent)
+            email.text.clear()
+            password.text.clear()
         }
         btnRegister.setOnClickListener {
+
             startActivity(Intent(this, RegisterActivity::class.java))
+            email.text.clear()
+            password.text.clear()
         }
     }
 }
