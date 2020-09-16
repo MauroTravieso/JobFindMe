@@ -57,18 +57,23 @@ class SignInActivity : AppCompatActivity() {
                 if (rge == false) {
                     //Toast.makeText(this, "Email is not registered!", android.widget.Toast.LENGTH_LONG).show()
                     email.error = "Registered Email is required."
+                    rge = false
 
                 }
                 if (rgp == false) {
                     //Toast.makeText(this, "Password is not correct!", android.widget.Toast.LENGTH_LONG).show()
                     password.error = "Correct Password is required."
+                    rgp = false
                 }
             }
             if (email.text.toString().isEmpty()) {
                 email.error = "Email is required."
+                rge = false
             }
+
             if (password.text.toString().isEmpty()) {
                 password.error = "Password is required."
+                rge = false
             }
 
         }

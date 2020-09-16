@@ -38,4 +38,10 @@ dependencies {
     //Design library
     implementation 'com.android.support:design:30.0.0'
 
+    // Room Library
+//    def room_version = "2.2.5"
+//    implementation "androidx.room:room-runtime:$room_version"
+//    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+
 }
