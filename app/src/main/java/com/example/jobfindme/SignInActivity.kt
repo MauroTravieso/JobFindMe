@@ -23,7 +23,8 @@ class SignInActivity : AppCompatActivity() {
         // Populate the user list
         users.add(admin)
 
-        var rg = false
+        var rge = false
+        var rgp = false
 
         btnSingIn.setOnClickListener {
             if (!email.text.toString().isEmpty() && !password.text.toString().isEmpty()) {
@@ -32,19 +33,34 @@ class SignInActivity : AppCompatActivity() {
 
                 for (user in users) {
                     if (eml.equals(user.username) && pss.equals(user.password)) {
-                        // Sending the intent to MainActivity
-                        var intent = Intent(this, MainActivity::class.java)
-                        intent.putExtra("username", "Hello, " + email.text.toString())
-                        startActivity(intent)
-                        email.text.clear()
-                        password.text.clear()
-                        Toast.makeText(this, "Welcome, $eml", Toast.LENGTH_LONG).show()
-                        rg = true
+                        if (eml.equals(user.username)) {
+                            rge = true
+                        }
+                        if (pss.equals(user.password)) {
+                            rgp = true
+                        }
+
+                        if (rge==true && rgp ==true) {
+                            // Sending the intent to MainActivity
+                            var intent = Intent(this, MainActivity::class.java)
+                            intent.putExtra("username", "Hello, " + email.text.toString())
+                            startActivity(intent)
+                            email.text.clear()
+                            password.text.clear()
+                            Toast.makeText(this, "Welcome, $eml", Toast.LENGTH_LONG).show()
+                            rge = false
+                            rgp = false
+                        }
                     }
                 }
-                if (rg == false) {
+                if (rge == false) {
                     Toast.makeText(this, "Email is not registered!", android.widget.Toast.LENGTH_LONG).show()
                     email.error = "Registered Email is required."
+
+                }
+                if (rgp == false) {
+                    Toast.makeText(this, "Password is not correct!", android.widget.Toast.LENGTH_LONG).show()
+                    password.error = "Correct Password is required."
                 }
             }
             if (email.text.toString().isEmpty()) {
