@@ -16,7 +16,6 @@ class SignInActivity : AppCompatActivity() {
     // Users
     val admin = User("admin","admin","admin@mail.com","admin")
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
@@ -57,6 +56,8 @@ class SignInActivity : AppCompatActivity() {
 
             var intent = Intent(this, RegisterActivity::class.java)
             startActivityForResult(intent,1)
+            email.text.clear()
+            password.text.clear()
         }
     }
 
@@ -76,11 +77,15 @@ class SignInActivity : AppCompatActivity() {
                         }
                     } else {
                         Toast.makeText(this, "Register unsuccessful!!! \nEmail account already exists!", Toast.LENGTH_LONG).show()
+                        //regist = false
                     }
                 }
             }
         }
     }
+
+
+    var reg = false
 
     fun forgotPassword(view : View) {
         val eml = email.text.toString()
@@ -93,24 +98,29 @@ class SignInActivity : AppCompatActivity() {
             email.error = "Please, enter an Email."
         } else {
             for (user in users) {
-                if (eml.equals(user.username)) {
-                    val fpass = user.password
-                    // Implicit intent
-                    val intent = Intent()
-                    intent.action = Intent.ACTION_SEND
-                    intent.type = "text/plain"
-                    intent.putExtra(Intent.EXTRA_TEXT, fpass)
-                    if (intent.resolveActivity(getPackageManager()) != null) {
-                        startActivity(intent)
+                if (reg == false) {
+                    if (eml.equals(user.username)) {
+                        val fpass = user.password
+                        // Implicit intent
+                        val intent = Intent()
+                        intent.action = Intent.ACTION_SEND
+                        intent.type = "text/plain"
+                        intent.putExtra(Intent.EXTRA_TEXT, fpass)
+                        if (intent.resolveActivity(getPackageManager()) != null) {
+                            startActivity(intent)
+                        }
+                        reg = true
                     }
+                } else {
+                    email.error = "Email is not registered."
+                    Toast.makeText(
+                        this,
+                        "The email provided is not registered!",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    //reg = false
                 }
             }
-            email.error = "Email is not registered."
-            Toast.makeText(
-                this,
-                "The email provided is not registered!",
-                Toast.LENGTH_LONG
-            ).show()
         }
     }
 }

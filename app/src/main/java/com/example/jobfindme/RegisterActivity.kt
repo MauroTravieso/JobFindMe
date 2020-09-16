@@ -42,7 +42,7 @@ class RegisterActivity : AppCompatActivity() {
                 lname.error = "Last name is required."
             }
             if (new_email.text.toString().isEmpty()) {
-                new_email.error = "Email name is required."
+                new_email.error = "Email is required."
             }
             if (new_password.text.toString().isEmpty()) {
                 new_password.error = "Password is required."
