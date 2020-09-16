@@ -55,12 +55,12 @@ class SignInActivity : AppCompatActivity() {
                     }
                 }
                 if (rge == false) {
-                    Toast.makeText(this, "Email is not registered!", android.widget.Toast.LENGTH_LONG).show()
+                    //Toast.makeText(this, "Email is not registered!", android.widget.Toast.LENGTH_LONG).show()
                     email.error = "Registered Email is required."
 
                 }
                 if (rgp == false) {
-                    Toast.makeText(this, "Password is not correct!", android.widget.Toast.LENGTH_LONG).show()
+                    //Toast.makeText(this, "Password is not correct!", android.widget.Toast.LENGTH_LONG).show()
                     password.error = "Correct Password is required."
                 }
             }
