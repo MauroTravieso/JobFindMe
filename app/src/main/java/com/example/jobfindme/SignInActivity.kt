@@ -23,6 +23,8 @@ class SignInActivity : AppCompatActivity() {
         // Populate the user list
         users.add(admin)
 
+        var rg = false
+
         btnSingIn.setOnClickListener {
             if (!email.text.toString().isEmpty() && !password.text.toString().isEmpty()) {
                 val eml = email.text.toString()
@@ -37,7 +39,12 @@ class SignInActivity : AppCompatActivity() {
                         email.text.clear()
                         password.text.clear()
                         Toast.makeText(this, "Welcome, $eml", Toast.LENGTH_LONG).show()
+                        rg = true
                     }
+                }
+                if (rg == false) {
+                    Toast.makeText(this, "Email is not registered!", android.widget.Toast.LENGTH_LONG).show()
+                    email.error = "Registered Email is required."
                 }
             }
             if (email.text.toString().isEmpty()) {
