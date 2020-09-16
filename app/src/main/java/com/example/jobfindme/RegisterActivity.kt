@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_register.*
+import kotlinx.android.synthetic.main.activity_sign_in.*
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +17,6 @@ class RegisterActivity : AppCompatActivity() {
             if (!fname.text.toString().isEmpty() && !lname.text.toString().isEmpty() && !new_email.text.isEmpty() && !new_password.text.isEmpty()) {
 
                 if (new_password.text.toString().equals(re_password.text.toString())) {
-                    Toast.makeText(this, "Account created successfully", Toast.LENGTH_LONG).show()
 
                     var new_user = User(
                         fname.text.toString(),
@@ -34,6 +34,21 @@ class RegisterActivity : AppCompatActivity() {
                 }
             } else {
                 Toast.makeText(this, "Please, complete every field!", Toast.LENGTH_LONG).show()
+            }
+            if (fname.text.toString().isEmpty()) {
+                fname.error = "First name is required."
+            }
+            if (lname.text.toString().isEmpty()) {
+                lname.error = "Last name is required."
+            }
+            if (new_email.text.toString().isEmpty()) {
+                new_email.error = "Email name is required."
+            }
+            if (new_password.text.toString().isEmpty()) {
+                new_password.error = "Password is required."
+            }
+            if (re_password.text.toString().isEmpty()) {
+                re_password.error = "Retype password is required."
             }
 
         }
