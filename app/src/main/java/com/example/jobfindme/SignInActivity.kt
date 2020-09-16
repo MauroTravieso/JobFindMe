@@ -66,7 +66,7 @@ class SignInActivity : AppCompatActivity() {
 
     fun forgotPassword(view : View) {
         val eml = email.text.toString()
-        Toast.makeText(this, "Forgot password? Please, enter a registered email!", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Forgot password? \nPlease, enter a registered email!", Toast.LENGTH_LONG).show()
         for (user in users) {
             if (eml.equals(user.username)) {
                 val fpass = user.password
