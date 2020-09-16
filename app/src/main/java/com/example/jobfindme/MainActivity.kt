@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Getting the intent from MainActivity
+        // Getting the intent from SignInActivity
         val intt = intent
         val output = intt.getStringExtra("username")
         welcome.text = output
