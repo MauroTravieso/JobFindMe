@@ -16,6 +16,7 @@ class SignInActivity : AppCompatActivity() {
     // Users
     val admin = User("admin","admin","admin@mail.com","admin")
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
