@@ -38,6 +38,8 @@ class RegisterActivity : AppCompatActivity() {
 
                     } else {
                         Toast.makeText(this, "Passwords don't match!", Toast.LENGTH_LONG).show()
+                        new_password.error = "Password does not match."
+                        re_password.error = "Retype password does not match."
                     }
                 } else {
                     new_email.error = "Invalid email signature!"
