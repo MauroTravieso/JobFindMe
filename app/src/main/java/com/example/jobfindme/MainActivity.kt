@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         setSupportActionBar(toolBar)
         val actionBar = supportActionBar
-        actionBar?.title = "App Name Here!"
+        actionBar?.title = "Job Find Me!"
 
         val drawerToggle: ActionBarDrawerToggle = object : ActionBarDrawerToggle(
             this,
