@@ -1,4 +1,4 @@
-package com.example.jobfindme
+package com.example.jobfindme.model
 
 import java.io.Serializable
 

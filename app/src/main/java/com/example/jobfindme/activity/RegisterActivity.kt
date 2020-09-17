@@ -1,12 +1,13 @@
-package com.example.jobfindme
+package com.example.jobfindme.activity
 
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.jobfindme.R
+import com.example.jobfindme.model.User
 import kotlinx.android.synthetic.main.activity_register.*
-import kotlinx.android.synthetic.main.activity_sign_in.*
 
 class RegisterActivity : AppCompatActivity() {
 

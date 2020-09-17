@@ -1,4 +1,4 @@
-package com.example.jobfindme
+package com.example.jobfindme.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,11 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.FragmentTransaction
+import com.example.jobfindme.R
+import com.example.jobfindme.fragment.ContactFragment
+import com.example.jobfindme.fragment.HomeFragment
+import com.example.jobfindme.fragment.TimelineFragment
+import com.example.jobfindme.fragment.WorkFragment
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
