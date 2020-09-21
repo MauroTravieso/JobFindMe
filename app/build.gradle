@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-// Room library
+// Room DB library
 apply plugin: 'kotlin-kapt'
 
 android {
@@ -41,7 +41,7 @@ dependencies {
     //Design library
     implementation 'com.android.support:design:30.0.0'
 
-    // Room Library
+    // Room DB Library
     def room_version = "2.2.2"
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
