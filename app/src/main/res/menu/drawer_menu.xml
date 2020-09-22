@@ -11,16 +11,14 @@
             />
 
         <item
-            android:id="@+id/work"
-            android:title="Work"
+            android:id="@+id/profile"
             android:icon="@drawable/ic_action_work"
-            />
+            android:title="Profile" />
 
         <item
-            android:id="@+id/contact"
-            android:title="Contact"
+            android:id="@+id/aboutApp"
             android:icon="@drawable/ic_action_contact"
-            />
+            android:title="About App" />
 
         <item
             android:id="@+id/timeline"
