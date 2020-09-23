@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
             // Work Fragment calling
-            R.id.work -> {
+            R.id.profile -> {
                 workFragment = WorkFragment()
                 supportFragmentManager
                     .beginTransaction()
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
             // Contact Fragment calling
-            R.id.contact -> {
+            R.id.aboutApp -> {
                 contactFragment = ContactFragment()
                 supportFragmentManager
                     .beginTransaction()
