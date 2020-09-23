@@ -65,9 +65,10 @@
             <TableRow
                 android:layout_width="388dp"
                 android:layout_height="match_parent">
+
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="100dp"
+                    android:layout_width="137dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_span="1"
@@ -83,6 +84,7 @@
                     android:background="@color/colorAccent"
                     android:text="Company"
                     android:textSize="20sp" />
+
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="100dp"
@@ -92,13 +94,178 @@
                     android:background="@color/colorAccent"
                     android:text="Status"
                     android:textSize="20sp" />
+
                 <TextView
                     android:id="@+id/textView4"
-                    android:layout_width="61dp"
+                    android:layout_width="73dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_span="1"
                     android:background="@color/colorAccent"
+                    android:text="View"
+                    android:textSize="20sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="388dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="Java developer"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="Nexient"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="Hiring"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="73dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="View"
+                    android:textSize="20sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="388dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="Java developer"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="Nexient"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="Hiring"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="73dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="View"
+                    android:textSize="20sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="388dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="Java developer"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="Nexient"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="73dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="Hiring"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="View"
+                    android:textSize="20sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="388dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="SQL Ingineer"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="Nexient"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="73dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:text="Hiring"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_span="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
                     android:text="View"
                     android:textSize="20sp" />
             </TableRow>
