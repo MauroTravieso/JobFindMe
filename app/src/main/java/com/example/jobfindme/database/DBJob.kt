@@ -20,8 +20,11 @@ class DBJob(context: Context): SQLiteOpenHelper(context,DB_NAME,null, DB_VERSION
         val DB_VERSION=3
         //Login-User Table Information
         val JOB_TABLE="Jobs"
+        val JOB_COLUMN_JOBID="jobId"
         val JOB_COLUMN_TITLE="title"
         val JOB_COLUMN_COMPANY="company"
+        val JOB_COLUMN_LOCATION="location"
+        val JOB_COLUMN_Apply="apply"
         val JOB_COLUMN_status="status"
         val JOB_COLUMN_VIEW="view"
         val CREATE_TABLE_JOBS="CREATE TABLE If not exists $JOB_TABLE(" +
@@ -29,8 +32,7 @@ class DBJob(context: Context): SQLiteOpenHelper(context,DB_NAME,null, DB_VERSION
                 "$JOB_COLUMN_COMPANY TEXT," +
                 "$JOB_COLUMN_status TEXT," +
                 "$JOB_COLUMN_VIEW TEXT," +
-                "PRIMARY KEY($JOB_COLUMN_TITLE)" +
-                ")"
+                "PRIMARY KEY($JOB_COLUMN_JOBID)" +")"
         val DROP_TABLE_JOBS="DROP TABLE IF EXISTS $JOB_TABLE"
     }
 }

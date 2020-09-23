@@ -1,21 +1,19 @@
 package com.example.jobfindme.model
 
-class Job {
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import java.io.Serializable
 
-    /// MOdel class
-    var title : String? = null
-    var company : String? = null
-    var status : String? = null
-    var view : String? = null
-
-    constructor(){
-
-    }
-
-    constructor(title: String?, company: String?, status: String?,view : String?) {
-        this.title = title
-        this.company = company
-        this.status = status
-        this.view=view
-    }
+@Entity
+ data class Job (
+    @PrimaryKey
+    var jobId: Long,
+    var title : String,
+    var company : String,
+    var status : String,
+    var apply: Boolean,
+    var location: String,
+    var view : String? = null) :
+    Serializable {
 }
+
