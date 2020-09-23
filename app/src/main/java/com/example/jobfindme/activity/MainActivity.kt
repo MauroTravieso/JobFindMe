@@ -1,5 +1,6 @@
 package com.example.jobfindme.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -11,9 +12,11 @@ import com.example.jobfindme.fragment.ContactFragment
 import com.example.jobfindme.fragment.HomeFragment
 import com.example.jobfindme.fragment.TimelineFragment
 import com.example.jobfindme.fragment.WorkFragment
+import com.example.jobfindme.activity.HomeActivity
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -59,6 +62,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             .replace(R.id.frame_layout, homeFragment)
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
             .commit()
+
+
+
     }
 
     // Implementation of Navigation Item Selected Listener
@@ -66,12 +72,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when(menuitem.itemId) {
             // Home Fragment calling
             R.id.home -> {
-                homeFragment = HomeFragment()
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frame_layout, homeFragment)
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .commit()
+//                homeFragment = HomeFragment()
+//                supportFragmentManager
+//                    .beginTransaction()
+//                    .replace(R.id.frame_layout, homeFragment)
+//                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+//                    .commit()
+                var intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
             }
 
             // Work Fragment calling
