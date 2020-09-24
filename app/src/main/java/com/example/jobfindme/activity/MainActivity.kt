@@ -1,5 +1,6 @@
 package com.example.jobfindme.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -76,12 +77,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             // Work Fragment calling
             R.id.profile -> {
-                workFragment = WorkFragment()
+              /*  workFragment = WorkFragment()
                 supportFragmentManager
                     .beginTransaction()
                     .replace(R.id.frame_layout, workFragment)
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .commit()
+                    .commit()*/
+
+                var intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
             }
 
             // Contact Fragment calling
