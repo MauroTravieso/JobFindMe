@@ -84,12 +84,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             // Work Fragment calling
             R.id.profile -> {
-                workFragment = WorkFragment()
+              /*  workFragment = WorkFragment()
                 supportFragmentManager
                     .beginTransaction()
                     .replace(R.id.frame_layout, workFragment)
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .commit()
+                    .commit()*/
+
+                var intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
             }
 
             // Contact Fragment calling
