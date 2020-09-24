@@ -10,12 +10,16 @@ import com.example.jobfindme.model.Job
 
 import java.lang.Exception
 
-class DBcontrollerJob (c: Context) {
+class DBcontrollerJob () {
     lateinit var dbJob: DBJob
-    var ourContext: Context
+    lateinit var ourContext: Context
     lateinit var database: SQLiteDatabase
-    init {
+    constructor(c:Context) : this() {
+
         ourContext=c
+    }
+    init {
+
     }
     fun open():DBcontrollerJob{
         dbJob= DBJob(ourContext)
@@ -48,6 +52,7 @@ class DBcontrollerJob (c: Context) {
         c?.moveToFirst()
         return c
     }
+
     // Update the record in the Table
     fun updateJobs(job: Job):Int {
         val cvUpdate = ContentValues()

@@ -29,7 +29,7 @@ class DBJob(context: Context): SQLiteOpenHelper(context,DB_NAME,null, DB_VERSION
         val JOB_COLUMN_VIEW="view"
         val CREATE_TABLE_JOBS="CREATE TABLE If not exists $JOB_TABLE(" +
                 "$JOB_COLUMN_TITLE TEXT NOT NULL," +
-                "$JOB_COLUMN_COMPANY TEXT," +
+                "$JOB_COLUMN_COMPANY TEXT," +"$JOB_COLUMN_LOCATION TEXT,"+"$JOB_COLUMN_Apply boolean,"+
                 "$JOB_COLUMN_status TEXT," +
                 "$JOB_COLUMN_VIEW TEXT," +
                 "PRIMARY KEY($JOB_COLUMN_JOBID)" +")"
