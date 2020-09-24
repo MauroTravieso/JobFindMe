@@ -14,7 +14,6 @@ class Home_Table(c:Context) : AppCompatActivity() {
     init {
         ourContext=c
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
