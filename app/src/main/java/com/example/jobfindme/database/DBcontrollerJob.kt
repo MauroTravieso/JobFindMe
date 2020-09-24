@@ -10,17 +10,13 @@ import com.example.jobfindme.model.Job
 
 import java.lang.Exception
 
-class DBcontrollerJob () {
+class DBcontrollerJob(c:Context) {
     lateinit var dbJob: DBJob
-    lateinit var ourContext: Context
+    var ourContext: Context
     lateinit var database: SQLiteDatabase
-    constructor(c:Context) : this() {
-
+    init {
         ourContext=c
     }
-//    init {
-//        ourContext=c
-//    }
     fun open():DBcontrollerJob{
         dbJob= DBJob(ourContext)
         database=dbJob.writableDatabase
