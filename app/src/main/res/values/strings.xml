@@ -14,4 +14,16 @@
 
     <string name="display_email">Email</string>
     <string name="profile_email">admin@mail.com</string>
+
+    <string name="aboutApp">About JobFindMe</string>
+    <string name="aboutAppTitle">CS473 MDP - Group3</string>
+    <string name="memberTarik">Tarik Ahmed (109180)</string>
+    <string name="memberWilfrid">Wilfrid Jules (986709)</string>
+    <string name="memberShiraz">Shiraz Shrestha (987052)</string>
+    <string name="memberMauro">Mauro Travieso (986965)</string>
+
+    <string name="aboutAppDetail">JobFindMe is an app that helps an individual get the information about the companies that
+    are hiring, hiring-freeze, and not accepting new applications. The app also shows Profile page where the user can upload
+    his/her picture or click an image from the camera.</string>
+
 </resources>
