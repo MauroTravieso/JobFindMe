@@ -18,9 +18,9 @@ class DBcontrollerJob () {
 
         ourContext=c
     }
-    init {
-
-    }
+//    init {
+//        ourContext=c
+//    }
     fun open():DBcontrollerJob{
         dbJob= DBJob(ourContext)
         database=dbJob.writableDatabase
