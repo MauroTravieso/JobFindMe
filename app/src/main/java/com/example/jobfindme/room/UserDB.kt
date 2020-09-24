@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.jobfindme.model.User
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [User::class],version = 1)
 abstract class UserDB : RoomDatabase() {
     companion object {
         fun dbCreation(application: Application) : UserDB {
