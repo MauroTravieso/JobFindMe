@@ -29,8 +29,11 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         // Room DB creation
-        UserDB.dbCreation(application)
-
+        var db= Room.databaseBuilder(applicationContext,UserDB::class.java,"UserDB").build()
+        val thread = Thread {
+            users = db.getUserDao().getAllUsers() as ArrayList<User>
+        }
+        thread.start()
         // Populate the user list
         users.add(admin)
 

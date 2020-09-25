@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.jobfindme.R
+import androidx.room.Room
 import com.example.jobfindme.model.User
+import com.example.jobfindme.room.UserDB
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity() {
@@ -16,7 +18,8 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-
+        // Room DB creation
+        var db= Room.databaseBuilder(applicationContext,UserDB::class.java,"UserDB").build()
         button_reg.setOnClickListener {
             if (!fname.text.toString().isEmpty() && !lname.text.toString().isEmpty() && !new_email.text.isEmpty() && !new_password.text.isEmpty()) {
 
@@ -24,13 +27,22 @@ class RegisterActivity : AppCompatActivity() {
                 if (new_email.text.toString().matches(emailPattern.toRegex())) {
 
                     if (new_password.text.toString().equals(re_password.text.toString())) {
-
                         var new_user = User(
                             fname.text.toString(),
                             lname.text.toString(),
                             new_email.text.toString(),
                             new_password.text.toString()
                         )
+                        val thread = Thread {
+
+
+                            db.getUserDao().insertUser(new_user)
+
+                            //fetch Records
+
+                        }
+                        thread.start()
+
 
                         val intent = Intent(this, MainActivity::class.java)
                         intent.putExtra("new_user", new_user)

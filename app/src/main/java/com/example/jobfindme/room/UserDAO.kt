@@ -12,7 +12,8 @@ interface UserDAO {
 
     @Query("SELECT * FROM User WHERE username like :search")
     fun getUser(search : String) : List<User>
-
+    @Query("SELECT*FROM User")
+    fun getAllUsers():List<User>
     @Update
     fun updateUser(user:User)
 
