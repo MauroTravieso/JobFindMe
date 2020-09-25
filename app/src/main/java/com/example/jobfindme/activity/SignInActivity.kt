@@ -23,13 +23,13 @@ class SignInActivity : AppCompatActivity() {
 
     // Users
     val admin = User("admin","admin","admin@mail.com","admin")
-
+    var db= Room.databaseBuilder(applicationContext,UserDB::class.java,"UserDB").build()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
         // Room DB creation
-        var db= Room.databaseBuilder(applicationContext,UserDB::class.java,"UserDB").build()
+
         val thread = Thread {
             users = db.getUserDao().getAllUsers() as ArrayList<User>
         }
@@ -117,16 +117,17 @@ class SignInActivity : AppCompatActivity() {
                             regist = true
                             Toast.makeText(this, "Account created successfully. \nPlease, Sign In", Toast.LENGTH_LONG).show()
 
-//                            Thread {
-//                                // Create the database
-//                                var db = Room.databaseBuilder(application, UserDB::class.java, "userdb").build()
-//
-//                                // Insert the user in the Room DB
-//                                var usr = new_user
-//                                db.userDao().insertUser(usr)
-//
-//                            }.start()
-                            InsertUserData(new_user,application).execute()
+                            Thread {
+                                // Create the database
+                              //  var db = Room.databaseBuilder(application, UserDB::class.java, "userdb").build()
+
+                                // Insert the user in the Room DB
+                                var usr = new_user
+                                db.getUserDao().insertUser(usr)
+
+                            }.start()
+                            db.close()
+                            //InsertUserData(new_user,application).execute()
 //                            var unm = GetUserData(new_user.username,application)
 //                            print("**************************** " + unm)
                         }
@@ -181,15 +182,15 @@ class SignInActivity : AppCompatActivity() {
 
     // Because the da cannot be run in the main thread
     // It is required to create a helper class
-    class InsertUserData(val user : User, val application: Application) : AsyncTask<Void,Void,Void>() {
-        override fun doInBackground(vararg p0: Void?): Void? {
-            UserDB.dbCreation(application).getUserDao().insertUser(user)
-            UserDB.dbCreation(application).getUserDao().getUser("mauro@mail.com").forEach() {
-                Log.d("Searching", "UserName : ${it.username}")
-            }
-            return null
-        }
-    }
+//    class InsertUserData(val user : User, val application: Application) : AsyncTask<Void,Void,Void>() {
+//        override fun doInBackground(vararg p0: Void?): Void? {
+//            UserDB.dbCreation(application).getUserDao().insertUser(user)
+//            UserDB.dbCreation(application).getUserDao().getUser("mauro@mail.com").forEach() {
+//                Log.d("Searching", "UserName : ${it.username}")
+//            }
+//            return null
+//        }
+//    }
 
 //    fun GetUserData(val usernm : String, val application: Application) : AsyncTask<Void,Void,Void>() {
 //        fun doInBackground(vararg p0: Void?): Void? {
